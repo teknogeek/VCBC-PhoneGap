@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="cc.valleycommunity.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>VCBC</name>
+    <description>
+        Ofiicial Valley Community Baptist Church app
+    </description>
+    <author email="nmaida@valleycommunity.cc" href="http://valleycommunity.cc">
+        Valley Community Baptist Church
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
