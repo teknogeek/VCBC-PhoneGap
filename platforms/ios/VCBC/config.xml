@@ -20,13 +20,22 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <name>VCBC</name>
     <description>
-        Valley Community Baptist Church App
+        Ofiicial Valley Community Baptist Church app
     </description>
     <author email="nmaida@valleycommunity.cc" href="http://valleycommunity.cc">
-        Apache Cordova Team
+        Valley Community Baptist Church
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
 </widget>

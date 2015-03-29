@@ -1,0 +1,118 @@
+2015-03-29 11:04:25.380 VCBC[36846:3753291] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Data/Application/B61649AC-DF21-4E48-B5B8-B8F26D8C2EA1/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:04:26.171 VCBC[36846:3753291] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:04:26.172 VCBC[36846:3753291] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:04:26.205 VCBC[36846:3753291] Unlimited access to network resources
+2015-03-29 11:04:26.237 VCBC[36846:3753291] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:04:28.152 VCBC[36846:3753291] Resetting plugins due to page load.
+2015-03-29 11:04:28.431 VCBC[36846:3753291] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Bundle/Application/D9462E49-7AA6-4138-B27A-8CC301B6A22D/VCBC.app/www/index.html
+2015-03-29 11:04:28.504 VCBC[36846:3753291] Received Event: deviceready
+2015-03-29 11:21:26.769 VCBC[37940:3856476] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Data/Application/84499962-3A90-4154-ABB2-64AB060CC630/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:21:27.851 VCBC[37940:3856476] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:21:27.852 VCBC[37940:3856476] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:21:27.913 VCBC[37940:3856476] Unlimited access to network resources
+2015-03-29 11:21:27.967 VCBC[37940:3856476] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:21:29.424 VCBC[37940:3856476] Resetting plugins due to page load.
+2015-03-29 11:21:30.110 VCBC[37940:3856476] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Bundle/Application/205C4C4D-3DDC-478B-B273-280FD55314B9/VCBC.app/www/index.html
+2015-03-29 11:21:38.527 VCBC[37940:3859499] Terminating since there is no system app.
+2015-03-29 11:24:27.188 VCBC[38305:3873056] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Data/Application/A6390F96-A445-46BB-81AC-428FDC1B28AA/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:24:27.394 VCBC[38305:3873056] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:24:27.394 VCBC[38305:3873056] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:24:27.396 VCBC[38305:3873056] Unlimited access to network resources
+2015-03-29 11:24:27.422 VCBC[38305:3873056] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:24:27.809 VCBC[38305:3873056] Resetting plugins due to page load.
+2015-03-29 11:24:27.938 VCBC[38305:3873056] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/4FCDA158-BA88-4336-BEE5-BBFBBF4D7F32/data/Containers/Bundle/Application/9ACC396B-43FF-4EF7-BC73-9B7E639B997A/VCBC.app/www/index.html
+2015-03-29 11:25:59.748 VCBC[38504:3877412] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Data/Application/868951D5-8319-4276-A188-2D9248FD173B/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:25:59.906 VCBC[38504:3877412] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:25:59.906 VCBC[38504:3877412] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:25:59.921 VCBC[38504:3877412] Unlimited access to network resources
+2015-03-29 11:25:59.958 VCBC[38504:3877412] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:26:01.177 VCBC[38504:3877412] Resetting plugins due to page load.
+2015-03-29 11:26:01.436 VCBC[38504:3877412] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Bundle/Application/D11561EB-AA20-4CBB-9ECA-66309288746A/VCBC.app/www/index.html
+2015-03-29 11:48:13.865 VCBC[39068:4014249] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Data/Application/A9F475D1-98FB-46AE-8BED-4ABAEE46E433/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:48:13.992 VCBC[39068:4014249] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:48:13.993 VCBC[39068:4014249] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:48:14.075 VCBC[39068:4014249] Unlimited access to network resources
+2015-03-29 11:48:14.102 VCBC[39068:4014249] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:48:15.584 VCBC[39068:4014249] Resetting plugins due to page load.
+2015-03-29 11:48:15.886 VCBC[39068:4014249] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Bundle/Application/85983ABB-ABA1-4168-8486-BF2526B89182/VCBC.app/www/index.html
+2015-03-29 11:48:16.017 VCBC[39068:4014249] THREAD WARNING: ['Device'] took '19.789307' ms. Plugin should use a background thread.
+2015-03-29 11:48:18.360 VCBC[39068:4014249] THREAD WARNING: ['Notification'] took '114.599121' ms. Plugin should use a background thread.
+2015-03-29 11:49:26.820 VCBC[39208:4023849] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Data/Application/45FBEB76-CB9F-44AB-8FDD-18A5635E751F/Library/Cookies/Cookies.binarycookies
+2015-03-29 11:49:26.982 VCBC[39208:4023849] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 11:49:26.983 VCBC[39208:4023849] Multi-tasking -> Device: YES, App: YES
+2015-03-29 11:49:26.984 VCBC[39208:4023849] Unlimited access to network resources
+2015-03-29 11:49:26.994 VCBC[39208:4023849] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 11:49:27.439 VCBC[39208:4023849] Resetting plugins due to page load.
+2015-03-29 11:49:27.579 VCBC[39208:4023849] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Bundle/Application/D04933A0-08BC-4F73-9384-2DE4E4EE1024/VCBC.app/www/index.html
+2015-03-29 11:49:30.487 VCBC[39208:4023849] THREAD WARNING: ['Notification'] took '31.993896' ms. Plugin should use a background thread.
+2015-03-29 11:49:38.108 VCBC[39208:4023849] THREAD WARNING: ['Notification'] took '13.597168' ms. Plugin should use a background thread.
+2015-03-29 12:06:32.572 VCBC[39815:4093299] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Data/Application/E227A7A6-1174-4030-B343-5B9D50D487A7/Library/Cookies/Cookies.binarycookies
+2015-03-29 12:06:33.802 VCBC[39815:4093299] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 12:06:33.802 VCBC[39815:4093299] Multi-tasking -> Device: YES, App: YES
+2015-03-29 12:06:33.885 VCBC[39815:4093299] Unlimited access to network resources
+2015-03-29 12:06:33.966 VCBC[39815:4093299] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 12:06:36.545 VCBC[39815:4093299] Resetting plugins due to page load.
+2015-03-29 12:06:37.046 VCBC[39815:4093299] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Bundle/Application/354A4A95-28EE-4C98-B015-281392EF6F7C/VCBC.app/www/index.html
+2015-03-29 12:08:34.726 VCBC[40083:4108119] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Data/Application/F2F3519F-5275-46E1-B8B0-F9A3BD6FDB38/Library/Cookies/Cookies.binarycookies
+2015-03-29 12:08:35.058 VCBC[40083:4108119] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-29 12:08:35.058 VCBC[40083:4108119] Multi-tasking -> Device: YES, App: YES
+2015-03-29 12:08:35.126 VCBC[40083:4108119] Unlimited access to network resources
+2015-03-29 12:08:35.174 VCBC[40083:4108119] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-29 12:08:37.999 VCBC[40083:4108119] Resetting plugins due to page load.
+2015-03-29 12:08:38.661 VCBC[40083:4108119] Finished load of: file:///Users/CG3/Library/Developer/CoreSimulator/Devices/0075EBA1-52E7-4540-91B3-4018DE8DC4D6/data/Containers/Bundle/Application/28C0F1EE-DDCB-476C-AC7B-8C2B5DC9476E/VCBC.app/www/index.html
