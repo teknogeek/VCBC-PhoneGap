@@ -22,5 +22,31 @@
             "type": "registry",
             "id": "org.apache.cordova.statusbar"
         }
+    },
+    "org.apache.cordova.geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.geolocation"
+        }
+    },
+    "org.apache.cordova.contacts": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.contacts"
+        }
+    },
+    "it.mobimentum.phonegapspinnerplugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mobimentum/phonegap-plugin-loading-spinner.git",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.plugin.ActivityIndicator": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Initsogar/cordova-activityindicator",
+            "subdir": "."
+        }
     }
 }

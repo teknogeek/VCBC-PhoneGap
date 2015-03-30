@@ -13,8 +13,10 @@
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
-    document.addEventListener('deviceready', function()
+    document.addEventListener("deviceready", function()
     {
+        StatusBar.overlaysWebView(false);
+        StatusBar.backgroundColorByHexString("#ffffff");
         FastClick.attach(document.body);
         if(navigator.notification)  // Override default HTML alert with native dialog
         {
@@ -33,7 +35,7 @@
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName()
     {
-        service.findByName($('.search-key').val()).done(function(employees)
+        service.findByName($(".search-key").val()).done(function(employees)
         {
             $(".content").html(employeeListTpl(employees));
         });
@@ -41,7 +43,8 @@
 
     function renderHomeView()
     {
-        $('body').html(homeTpl);
-        $('.search-key').on('keyup', findByName);
+        $("body").html(homeTpl);
+        $(".search-key").on("keyup", findByName);
+        findByName();
     }
 }());
