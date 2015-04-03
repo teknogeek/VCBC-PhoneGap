@@ -9,7 +9,6 @@ var HomeView = function()
 	this.render = function()
 	{
 		this.$el.html(this.template());
-		this.loadMap();
 		return this;
 	};
 
@@ -29,6 +28,50 @@ var HomeView = function()
 			};
 
 			var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
+
+			var youMarker = new google.maps.Marker({
+				position: latLong,
+				map: map,
+				title: "You"
+			});
+
+			var geocoder = new google.maps.Geocoder();
+			var bounds = new google.maps.LatLngBounds();
+			geocoder.geocode({"address": "590 West Avon Rd, Avon, CT 06001"}, function(results, status)
+			{
+				if(status == google.maps.GeocoderStatus.OK)
+				{
+					var vcbcMarker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location,
+						title: "VCBC"
+					});
+					bounds.extend(vcbcMarker.getPosition());
+				}
+				else
+				{
+					alert("Geocode was not successful for the following reason: " + status);
+				}
+			});
+
+			geocoder.geocode({"address" : "718 Pine Street, Bristol, CT 06010"}, function(results, status)
+			{
+				if(status == google.maps.GeocoderStatus.OK)
+				{
+					var bristolMarker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location,
+						title: "Bristol Multi-Site"
+					});
+					bounds.extend(vcbcMarker.getPosition());
+				}
+				else
+				{
+					alert("Geocode was not successful for the following reason: " + status);
+				}
+			});
+
+			map.fitBounds(bounds);
 		},
 		function(error)
 		{

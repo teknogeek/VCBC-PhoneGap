@@ -51,8 +51,6 @@
 		12877B2F96F74DF1A20156E6 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 259378753E7A4613ADFBB705 /* CDVContact.m */; };
 		816B9A841BD340EC908749FD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B452E8FC52B840A5B54C6DFF /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9DA1ECC27A3A448EBF15B96D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B1403928834A9C93180601 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		166C3E8ACA174A76B392517E /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A34D9060CB4F39A8B2C164 /* ActivityIndicator.m */; };
-		9A0CCB45F25246D184A49364 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 43540926E7FE4AC382E2CA17 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,10 +135,6 @@
 		C2224559F174438EA2AA624E /* CDVContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVContact.h"; path = "org.apache.cordova.contacts/CDVContact.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		B452E8FC52B840A5B54C6DFF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		19B1403928834A9C93180601 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBookUI.framework"; path = "System/Library/Frameworks/AddressBookUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		A4A34D9060CB4F39A8B2C164 /* ActivityIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ActivityIndicator.m"; path = "org.apache.cordova.plugin.ActivityIndicator/ActivityIndicator.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		43540926E7FE4AC382E2CA17 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD.m"; path = "org.apache.cordova.plugin.ActivityIndicator/MBProgressHUD.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		C225058DE44245B69FCC6BE6 /* ActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ActivityIndicator.h"; path = "org.apache.cordova.plugin.ActivityIndicator/ActivityIndicator.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		4FA05AD6E9F94EFBB090345F /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD.h"; path = "org.apache.cordova.plugin.ActivityIndicator/MBProgressHUD.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,10 +256,6 @@
 				259378753E7A4613ADFBB705 /* CDVContact.m */,
 				B0FCA2E2E52B43DDB1B68FF1 /* CDVContacts.h */,
 				C2224559F174438EA2AA624E /* CDVContact.h */,
-				A4A34D9060CB4F39A8B2C164 /* ActivityIndicator.m */,
-				43540926E7FE4AC382E2CA17 /* MBProgressHUD.m */,
-				C225058DE44245B69FCC6BE6 /* ActivityIndicator.h */,
-				4FA05AD6E9F94EFBB090345F /* MBProgressHUD.h */,
 			);
 			name = Plugins;
 			path = "VCBC/Plugins";
@@ -458,8 +448,6 @@
 				3D74429242FD4496AB28B3B6 /* CDVLocation.m in Sources */,
 				AEE3057F331B4133B4FE60CE /* CDVContacts.m in Sources */,
 				12877B2F96F74DF1A20156E6 /* CDVContact.m in Sources */,
-				166C3E8ACA174A76B392517E /* ActivityIndicator.m in Sources */,
-				9A0CCB45F25246D184A49364 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

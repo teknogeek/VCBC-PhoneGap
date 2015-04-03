@@ -3,9 +3,9 @@
 {
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
 
-	ActivityIndicator.show("Loading location...");
-	$("body").html(new HomeView().render().$el);
-	ActivityIndicator.hide();
+	var homeView = new HomeView();
+	$("body").html(homeView.render().$el);
+	homeView.loadMap();
 
     document.addEventListener("deviceready", function()
     {

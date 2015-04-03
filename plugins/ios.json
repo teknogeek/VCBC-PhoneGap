@@ -39,10 +39,6 @@
                         {
                             "xml": "<feature name=\"Contacts\"><param name=\"ios-package\" value=\"CDVContacts\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ActivityIndicator\"><param name=\"ios-package\" value=\"ActivityIndicator\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -110,9 +106,6 @@
             "PACKAGE_NAME": "cc.valleycommunity.app"
         },
         "org.apache.cordova.contacts": {
-            "PACKAGE_NAME": "cc.valleycommunity.app"
-        },
-        "org.apache.cordova.plugin.ActivityIndicator": {
             "PACKAGE_NAME": "cc.valleycommunity.app"
         }
     },

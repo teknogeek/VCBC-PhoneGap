@@ -90,13 +90,6 @@ module.exports = [
         "merges": [
             ""
         ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.plugin.ActivityIndicator/www/activityIndicator.js",
-        "id": "org.apache.cordova.plugin.ActivityIndicator.ActivityIndicator",
-        "clobbers": [
-            "ActivityIndicator"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -107,8 +100,7 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.3.0",
     "org.apache.cordova.statusbar": "0.1.10",
     "org.apache.cordova.geolocation": "0.3.12",
-    "org.apache.cordova.contacts": "0.2.16",
-    "org.apache.cordova.plugin.ActivityIndicator": "1.0.0"
+    "org.apache.cordova.contacts": "0.2.16"
 }
 // BOTTOM OF METADATA
 });

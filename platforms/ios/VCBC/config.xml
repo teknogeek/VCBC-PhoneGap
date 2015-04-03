@@ -44,7 +44,4 @@
     <feature name="Contacts">
         <param name="ios-package" value="CDVContacts" />
     </feature>
-    <feature name="ActivityIndicator">
-        <param name="ios-package" value="ActivityIndicator" />
-    </feature>
 </widget>

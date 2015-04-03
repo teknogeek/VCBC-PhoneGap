@@ -23,10 +23,6 @@
                         {
                             "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ActivityIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ActivityIndicator\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -77,9 +73,6 @@
             "PACKAGE_NAME": "cc.valleycommunity.app"
         },
         "org.apache.cordova.contacts": {
-            "PACKAGE_NAME": "cc.valleycommunity.app"
-        },
-        "org.apache.cordova.plugin.ActivityIndicator": {
             "PACKAGE_NAME": "cc.valleycommunity.app"
         }
     },
