@@ -1,11 +1,14 @@
-// We use an "Immediate Function" to initialize the application to avoid leaving anything behind in the global scope
 (function()
 {
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
 
 	var homeView = new HomeView();
 	$("body").html(homeView.render().$el);
-	homeView.loadMap();
+	var mapData = homeView.loadMap();
+    mapData.then(function(data)
+    {
+        homeView.setEtaData(data);
+    });
 
     document.addEventListener("deviceready", function()
     {

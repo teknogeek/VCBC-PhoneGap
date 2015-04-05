@@ -1,7 +1,8 @@
 function drawMarkers(map, latLong)
 {
 	var geocoder = new google.maps.Geocoder();
-	geocoder.geocode({"address": "590 West Avon Rd, Avon, CT 06001"}, function(results, status)
+
+	geocoder.geocode({"address": "590 West Avon Rd, Avon, CT 06001"}, function(vcbcResults, status)
 	{
 		if(status == google.maps.GeocoderStatus.OK)
 		{
@@ -9,7 +10,7 @@ function drawMarkers(map, latLong)
 			
 			var vcbcMarker = new MarkerWithLabel({
 				map: map,
-				position: results[0].geometry.location,
+				position: vcbcResults[0].geometry.location,
 				labelContent: "VCBC",
 				labelAnchor: new google.maps.Point(30, 0),
 				labelClass: "labels",
@@ -18,19 +19,19 @@ function drawMarkers(map, latLong)
 			
 			bounds.extend(vcbcMarker.getPosition());
 			
-			geocoder.geocode({"address" : "718 Pine Street, Bristol, CT 06010"}, function(results, status)
+			geocoder.geocode({"address" : "718 Pine St, Bristol, CT 06010"}, function(bristolResults, status)
 			{
 				if(status == google.maps.GeocoderStatus.OK)
 				{
 					var bristolMarker = new MarkerWithLabel({
 						map: map,
-						position: results[0].geometry.location,
+						position: bristolResults[0].geometry.location,
 						labelContent: "Bristol",
 						labelAnchor: new google.maps.Point(30, 0),
 						labelClass: "labels",
 						labelStyle: { opacity: 1.0 }
 					});
-
+					
 					bounds.extend(bristolMarker.getPosition());
 
 					var youMarker = new MarkerWithLabel({

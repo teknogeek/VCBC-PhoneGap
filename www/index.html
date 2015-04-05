@@ -26,15 +26,24 @@
         white-space: nowrap;
      }
     </style>
-
 </head>
 <body>
 <script id="home-tpl" type="text/template">
     <header class="bar bar-nav">
-        <h1 class="title">Map</h1>
+        <h1 class="title">Welcome</h1>
     </header>
     <div class="content">
         <div id="map-canvas"></div>
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="#">
+                VCBC
+                <p>ETA: {{ vcbcETA }}</p>
+            </a>
+            <a class="tab-item" href="#">
+                Bristol
+                <p>ETA: {{ bristolETA }}</p>
+            </a>
+        </nav>
     </div>
 </script>
 
