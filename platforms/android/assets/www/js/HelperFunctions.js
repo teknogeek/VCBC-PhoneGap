@@ -11,9 +11,9 @@ function drawMarkers(map, latLong)
 				map: map,
 				position: results[0].geometry.location,
 				labelContent: "VCBC",
-				labelAnchor: new google.maps.Point(22, 50),
-				labelClass: "labels", // the CSS class for the label
-				labelStyle: {opacity: 1.0}
+				labelAnchor: new google.maps.Point(30, 0),
+				labelClass: "labels",
+				labelStyle: { opacity: 1.0 }
 			});
 			
 			bounds.extend(vcbcMarker.getPosition());
@@ -26,9 +26,9 @@ function drawMarkers(map, latLong)
 						map: map,
 						position: results[0].geometry.location,
 						labelContent: "Bristol",
-						labelAnchor: new google.maps.Point(22, 50),
-						labelClass: "labels", // the CSS class for the label
-						labelStyle: {opacity: 1.0}
+						labelAnchor: new google.maps.Point(30, 0),
+						labelClass: "labels",
+						labelStyle: { opacity: 1.0 }
 					});
 
 					bounds.extend(bristolMarker.getPosition());
@@ -37,9 +37,9 @@ function drawMarkers(map, latLong)
 						position: latLong,
 						map: map,
 						labelContent: "You",
-						labelAnchor: new google.maps.Point(22, 50),
-						labelClass: "labels", // the CSS class for the label
-						labelStyle: {opacity: 1.0}
+						labelAnchor: new google.maps.Point(30, 0),
+						labelClass: "labels",
+						labelStyle: { opacity: 1.0 }
 					});
 					
 					bounds.extend(youMarker.getPosition());

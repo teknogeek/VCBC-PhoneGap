@@ -15,25 +15,25 @@ var HomeView = function()
 	this.loadMap = function()
 	{
 		navigator.geolocation.getCurrentPosition(
-		function(position)
-		{
-			var longitude = position.coords.longitude;
-			var latitude = position.coords.latitude;
-			var latLong = new google.maps.LatLng(latitude, longitude);
+			function(position)
+			{
+				var longitude = position.coords.longitude;
+				var latitude = position.coords.latitude;
+				var latLong = new google.maps.LatLng(latitude, longitude);
 
-			var mapOptions = {
-				center: latLong,
-				zoom: 16,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
+				var mapOptions = {
+					center: latLong,
+					zoom: 16,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
 
-			var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
-			drawMarkers(map, latLong);
-		},
-		function(error)
-		{
-			alert("Error getting location. Code: " + error.code + " | Message: " + error.message);
-		});
+				var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+				drawMarkers(map, latLong);
+			},
+			function(error)
+			{
+				alert("Error getting location. Code: " + error.code + " | Message: " + error.message);
+			});
 	};
 
 	this.initialize();
