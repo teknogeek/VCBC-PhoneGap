@@ -3,12 +3,23 @@
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
 
 	var homeView = new HomeView();
-	$("body").html(homeView.render().$el);
-	var mapData = homeView.loadMap();
-    mapData.then(function(data)
+    router.addRoute("", function()
     {
-        homeView.setEtaData(data);
+        $("body").html(homeView.render().$el);
+
+        homeView.getEtaData().then(function(data)
+        {
+            homeView.setEtaData(data);
+            homeView.loadMap();
+        });
     });
+
+    router.addRoute("church/:id", function(id)
+    {
+        console.log("church: " + id);
+    });
+
+    router.start();
 
     document.addEventListener("deviceready", function()
     {

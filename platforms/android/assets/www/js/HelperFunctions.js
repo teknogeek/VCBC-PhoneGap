@@ -1,7 +1,7 @@
 function drawMarkers(map, latLong)
 {
 	var geocoder = new google.maps.Geocoder();
-
+	var deferred = $.Deferred();
 	geocoder.geocode({"address": "590 West Avon Rd, Avon, CT 06001"}, function(vcbcResults, status)
 	{
 		if(status == google.maps.GeocoderStatus.OK)
@@ -46,6 +46,7 @@ function drawMarkers(map, latLong)
 					bounds.extend(youMarker.getPosition());
 
 					map.fitBounds(bounds);
+					deferred.resolve(latLong);
 				}
 				else
 				{
@@ -58,4 +59,5 @@ function drawMarkers(map, latLong)
 			alert("Geocode was not successful for the following reason: " + status);
 		}
 	});
+	return deferred.promise();
 }
