@@ -1,11 +1,14 @@
 (function()
 {
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+	ChurchView.prototype.template = Handlebars.compile($("#church-tpl").html());
 
 	var homeView = new HomeView();
+	var slider = new PageSlider($("body"));
+
     router.addRoute("", function()
     {
-        $("body").html(homeView.render().$el);
+        slider.slidePage(homeView.render().$el);
 
         homeView.getEtaData().then(function(data)
         {
@@ -14,9 +17,9 @@
         });
     });
 
-    router.addRoute("church/:id", function(id)
+    router.addRoute("church/:id", function(church)
     {
-        console.log("church: " + id);
+	    slider.slidePage(new ChurchView(church).render().$el);
     });
 
     router.start();
