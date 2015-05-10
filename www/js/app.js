@@ -2,9 +2,10 @@
 {
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
 	ChurchView.prototype.template = Handlebars.compile($("#church-tpl").html());
+    DirectionsView.prototype.template = Handlebars.compile($("#directions-tpl").html());
 
 	var homeView = new HomeView();
-	var slider = new PageSlider($("body"));
+	var slider = new PageSlider($('body'));
 
     router.addRoute("", function()
     {
@@ -20,6 +21,11 @@
     router.addRoute("church/:id", function(church)
     {
 	    slider.slidePage(new ChurchView(church).render().$el);
+    });
+
+    router.addRoute("directions/:id", function(address)
+    {
+        slider.slidePage(new DirectionsView(address).render().$el);
     });
 
     router.start();

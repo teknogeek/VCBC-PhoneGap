@@ -1,14 +1,34 @@
 (function()
 {
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+	ChurchView.prototype.template = Handlebars.compile($("#church-tpl").html());
+    DirectionsView.prototype.template = Handlebars.compile($("#directions-tpl").html());
 
 	var homeView = new HomeView();
-	$("body").html(homeView.render().$el);
-	var mapData = homeView.loadMap();
-    mapData.then(function(data)
+	var slider = new PageSlider($('body'));
+
+    router.addRoute("", function()
     {
-        homeView.setEtaData(data);
+        slider.slidePage(homeView.render().$el);
+
+        homeView.getEtaData().then(function(data)
+        {
+            homeView.setEtaData(data);
+            homeView.loadMap();
+        });
     });
+
+    router.addRoute("church/:id", function(church)
+    {
+	    slider.slidePage(new ChurchView(church).render().$el);
+    });
+
+    router.addRoute("directions/:id", function(address)
+    {
+        slider.slidePage(new DirectionsView(address).render().$el);
+    });
+
+    router.start();
 
     document.addEventListener("deviceready", function()
     {
