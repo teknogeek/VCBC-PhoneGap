@@ -18,14 +18,14 @@
         });
     });
 
-    router.addRoute("church/:id", function(church)
+    router.addRoute("church/:name", function(church)
     {
 	    slider.slidePage(new ChurchView(church).render().$el);
     });
 
-    router.addRoute("directions/:id", function(address)
+    router.addRoute("directions/:name/:address", function(churchName, address)
     {
-        slider.slidePage(new DirectionsView(address).render().$el);
+        slider.slidePage(new DirectionsView(churchName, address).render().$el);
     });
 
     router.start();

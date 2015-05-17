@@ -7,21 +7,24 @@ var ChurchView = function(church)
 
 	this.render = function()
 	{
-		var address = (church == "Avon") ? "590+West+Avon+Rd+Avon+CT+06001|" + church : "718+Pine+St+Bristol+CT+06010|" + church;
+		var address = (church == "Avon") ? "590+West+Avon+Rd+Avon+CT+06001" : "718+Pine+St+Bristol+CT+06010";
 		var timeUntil = this.calcTime();
-		//address = (device.platform == "iOS") ? "http://maps.google.com/maps?q=" + address : "geo:0,0?q=" + address;
+		
+		address = (true) ? "#directions/" + church + "/" + address : "geo:0,0?q=" + address;
 		//address = "https://maps.google.com?saddr=Current+Location&daddr=" + address;
 		this.$el.html(this.template({
 			"churchName": church,
 			"address": address,
 			"timeUntil" : timeUntil
 		}));
+		this.timeLoop(this.$el, this.template, this.calcTime, address);
 		return this;
 	};
 
 	this.calcTime = function()
 	{
 	    var sunday = moment().day("Sunday").format("YYYY-MM-DD");
+
 	    //start times
 	    var serviceStartTimes = [
 	        moment(sunday + " 08:00:00", "YYYY-MM-DD HH:mm:ss").utcOffset("America/New_York"),
@@ -37,7 +40,7 @@ var ChurchView = function(church)
 	    ];
 
 	    //current date and time
-	    var today = moment().utcOffset("America/New_York");
+	    var today = moment().utcOffset("America/New_York").second(0);
 
 	    //loop over service start times
 	    for(var timeIndex in serviceStartTimes)
@@ -72,7 +75,7 @@ var ChurchView = function(church)
 	                    service = serviceStartTimes[timeIndex];
 	                }
 
-	                //return how long until service starts and kill loop
+	                //return how long until service starts and kill for loop
 	                return "starts " + service.from(today);
 	                break;
 	            }
@@ -84,6 +87,38 @@ var ChurchView = function(church)
 	            break;
 	        }
 	    }
+	};
+
+	this.timeLoop = function(el, template, calcTime, address)
+	{
+		var date = new Date();
+		var seconds = date.getSeconds();
+		var milliseconds = date.getMilliseconds();
+		var loop;
+
+		var secondsTillUpdate = 60000 - ((seconds * 1000) + milliseconds);
+		var funct = function()
+		{
+			var timeUntil = calcTime();
+			el.html(template({
+				"churchName": church,
+				"address": address,
+				"timeUntil" : timeUntil
+			}));
+			
+			date = new Date();
+			seconds = date.getSeconds();
+			milliseconds = date.getMilliseconds();
+			secondsTillUpdate = 60000 - ((seconds * 1000) + milliseconds);
+
+			clearTimeout(loop);
+			if(timeUntil !== "starts next week")
+			{
+				loop = setTimeout(funct, secondsTillUpdate);
+			}
+		};
+
+		loop = setInterval(funct, secondsTillUpdate);
 	};
 
 	this.initialize();

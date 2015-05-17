@@ -7,9 +7,9 @@ var ChurchView = function(church)
 
 	this.render = function()
 	{
-		var address = (church == "Avon") ? "590+West+Avon+Rd+Avon+CT+06001|" + church : "718+Pine+St+Bristol+CT+06010|" + church;
+		var address = (church == "Avon") ? "590+West+Avon+Rd+Avon+CT+06001" : "718+Pine+St+Bristol+CT+06010";
 		var timeUntil = this.calcTime();
-		//address = (device.platform == "iOS") ? "http://maps.google.com/maps?q=" + address : "geo:0,0?q=" + address;
+		address = (device.platform == "iOS") ? "http://maps.google.com/maps?q=" + address : "geo:0,0?q=" + address;
 		//address = "https://maps.google.com?saddr=Current+Location&daddr=" + address;
 		this.$el.html(this.template({
 			"churchName": church,

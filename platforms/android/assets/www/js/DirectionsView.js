@@ -1,5 +1,8 @@
-var DirectionsView = function(address)
+var DirectionsView = function(churchName, address)
 {
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+
 	this.initialize = function()
 	{
 		this.$el = $("<div/>");
@@ -7,9 +10,6 @@ var DirectionsView = function(address)
 
 	this.render = function()
 	{
-		var split = address.split("|");
-		var addressLoc = split[0];
-		var churchName = split[1];
 		this.$el.html(this.template({
 			"address": address,
 			"churchName": churchName
