@@ -9,19 +9,22 @@ var ChurchView = function(church)
 	{
 		var address = (church == "Avon") ? "590+West+Avon+Rd+Avon+CT+06001" : "718+Pine+St+Bristol+CT+06010";
 		var timeUntil = this.calcTime();
-		address = (device.platform == "iOS") ? "http://maps.google.com/maps?q=" + address : "geo:0,0?q=" + address;
+		
+		address = (true) ? "#directions/" + church + "/" + address : "geo:0,0?q=" + address;
 		//address = "https://maps.google.com?saddr=Current+Location&daddr=" + address;
 		this.$el.html(this.template({
 			"churchName": church,
 			"address": address,
 			"timeUntil" : timeUntil
 		}));
+		this.timeLoop(this.$el, this.template, this.calcTime, address);
 		return this;
 	};
 
 	this.calcTime = function()
 	{
 	    var sunday = moment().day("Sunday").format("YYYY-MM-DD");
+
 	    //start times
 	    var serviceStartTimes = [
 	        moment(sunday + " 08:00:00", "YYYY-MM-DD HH:mm:ss").utcOffset("America/New_York"),
@@ -37,7 +40,8 @@ var ChurchView = function(church)
 	    ];
 
 	    //current date and time
-	    var today = moment().utcOffset("America/New_York");
+	    var today = moment().utcOffset("America/New_York").second(0);
+	    var today = moment().day("Sunday").hour(9).minute(30).second(0).utcOffset("America/New_York");
 
 	    //loop over service start times
 	    for(var timeIndex in serviceStartTimes)
@@ -52,7 +56,11 @@ var ChurchView = function(church)
 	        if(today.isBetween(service, endOfService))
 	        {
 	            //return how long service has been going on for and kill loop
-	            return "started " + service.from(today);
+	            var dataObj = {
+	                "isLast": false,
+	                "timeString": "started " + service.from(today)
+	            };
+	            return dataObj;
 	            break;
 	        }
 	        
@@ -72,18 +80,58 @@ var ChurchView = function(church)
 	                    service = serviceStartTimes[timeIndex];
 	                }
 
-	                //return how long until service starts and kill loop
-	                return "starts " + service.from(today);
+	                //return how long until service starts and kill for loop
+	                var dataObj = {
+	                	"isLast": false,
+	                	"timeString": "starts " + service.from(today)
+	                };
+	                return dataObj;
 	                break;
 	            }
 	        }
 	        else
 	        {
 	            //if past last service "end"
-	            return "starts next week";
+	            var dataObj = {
+	                "isLast": true,
+	                "timeString": "starts next week"
+	            };
+	            return dataObj;
 	            break;
 	        }
 	    }
+	};
+
+	this.timeLoop = function(el, template, calcTime, address)
+	{
+		var date = new Date();
+		var seconds = date.getSeconds();
+		var milliseconds = date.getMilliseconds();
+		var loop;
+
+		var secondsTillUpdate = 60000 - ((seconds * 1000) + milliseconds);
+		var funct = function()
+		{
+			var timeUntil = calcTime();
+			el.html(template({
+				"churchName": church,
+				"address": address,
+				"timeUntil" : timeUntil
+			}));
+			
+			date = new Date();
+			seconds = date.getSeconds();
+			milliseconds = date.getMilliseconds();
+			secondsTillUpdate = 60000 - ((seconds * 1000) + milliseconds);
+
+			clearTimeout(loop);
+			if(!timeUntil.isLast)
+			{
+				loop = setTimeout(funct, secondsTillUpdate);
+			}
+		};
+
+		loop = setInterval(funct, secondsTillUpdate);
 	};
 
 	this.initialize();

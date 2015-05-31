@@ -3,6 +3,7 @@
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
 	ChurchView.prototype.template = Handlebars.compile($("#church-tpl").html());
     DirectionsView.prototype.template = Handlebars.compile($("#directions-tpl").html());
+    VSplitView.prototype.template = Handlebars.compile($("#vsplit-tpl").html());
 
 	var homeView = new HomeView();
 	var slider = new PageSlider($('body'));
@@ -26,6 +27,11 @@
     router.addRoute("directions/:name/:address", function(churchName, address)
     {
         slider.slidePage(new DirectionsView(churchName, address).render().$el);
+    });
+
+    router.addRoute("vsplit/:name", function(churchName)
+    {
+        slider.slidePage(new VSplitView(churchName).render().$el);
     });
 
     router.start();

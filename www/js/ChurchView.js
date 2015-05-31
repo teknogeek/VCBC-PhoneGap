@@ -55,7 +55,11 @@ var ChurchView = function(church)
 	        if(today.isBetween(service, endOfService))
 	        {
 	            //return how long service has been going on for and kill loop
-	            return "started " + service.from(today);
+	            var dataObj = {
+	                "isLast": false,
+	                "timeString": "started " + service.from(today)
+	            };
+	            return dataObj;
 	            break;
 	        }
 	        
@@ -76,14 +80,22 @@ var ChurchView = function(church)
 	                }
 
 	                //return how long until service starts and kill for loop
-	                return "starts " + service.from(today);
+	                var dataObj = {
+	                	"isLast": false,
+	                	"timeString": "starts " + service.from(today)
+	                };
+	                return dataObj;
 	                break;
 	            }
 	        }
 	        else
 	        {
 	            //if past last service "end"
-	            return "starts next week";
+	            var dataObj = {
+	                "isLast": true,
+	                "timeString": "starts next week"
+	            };
+	            return dataObj;
 	            break;
 	        }
 	    }
@@ -112,7 +124,7 @@ var ChurchView = function(church)
 			secondsTillUpdate = 60000 - ((seconds * 1000) + milliseconds);
 
 			clearTimeout(loop);
-			if(timeUntil !== "starts next week")
+			if(!timeUntil.isLast)
 			{
 				loop = setTimeout(funct, secondsTillUpdate);
 			}

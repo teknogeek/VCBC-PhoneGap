@@ -29,9 +29,9 @@
         slider.slidePage(new DirectionsView(churchName, address).render().$el);
     });
 
-    router.addRoute("vsplit", function(churchName, address)
+    router.addRoute("vsplit/:name", function(churchName)
     {
-        slider.slidePage(new VSplitView(churchName, address).render().$el);
+        slider.slidePage(new VSplitView(churchName).render().$el);
     });
 
     router.start();

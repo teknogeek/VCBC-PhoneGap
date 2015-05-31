@@ -25,6 +25,17 @@
         width: 60px;
         white-space: nowrap;
      }
+
+    textarea.notes
+    {
+        background: url(assets/images/notebook1.png) repeat-y;
+        width: 100%;
+        height: 100%;
+        font: normal 14px verdana;
+        line-height: 25px;
+        padding: 2px 10px;
+        border: solid 1px #ddd;
+    }
     </style>
 </head>
 <body>
@@ -37,11 +48,11 @@
         <nav class="bar bar-tab">
             <a class="tab-item" href="#church/Avon">
                 Avon
-                <p>ETA: {{ vcbcETA }}</p>
+                <p>ETA: {{vcbcETA}}</p>
             </a>
             <a class="tab-item" href="#church/Bristol">
                 Bristol
-                <p>ETA: {{ bristolETA }}</p>
+                <p>ETA: {{bristolETA}}</p>
             </a>
         </nav>
     </div>
@@ -53,12 +64,12 @@
             <span class="icon icon-left-nav"></span>
             Map
         </a>
-        <h1 class="title">{{ churchName }}</h1>
+        <h1 class="title">{{churchName}}</h1>
     </header>
     <div class="content">
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a class="navigate-right" href="{{ address }}">
+                <a class="navigate-right" href="{{address}}">
                     <img class="media-object pull-left" src="http://placehold.it/42x42">
                     <div class="media-body">
                         Get Directions 
@@ -85,23 +96,48 @@
             </li>
         </ul>
         <nav class="bar bar-tab">
-            <div class="tab-item">
-                Service {{ timeUntil }}
-            </div>
+            {{#if timeUntil.isLast}}
+                <div class="tab-item">
+                    Service {{timeUntil.timeString}}
+                </div>
+            {{else}}
+                <a class="tab-item" href="#vsplit/{{churchName}}">
+                    Service {{timeUntil.timeString}}
+                    <p><strong>Tap to enter live mode</strong></p>
+                </a>
+            {{/if}}
         </nav>
     </div>
 </script>
 
 <script id="directions-tpl" type="text/template">
     <header class="bar bar-nav">
-        <a class="btn btn-link btn-nav pull-left" href="#church/{{ churchName }}">
+        <a class="btn btn-link btn-nav pull-left" href="#church/{{churchName}}">
             <span class="icon icon-left-nav"></span>
-            {{ churchName }}
+            {{churchName}}
         </a>
         <h1 class="title">Directions</h1>
     </header>
     <div class="content">
-        <iframe frameborder="0" style="width:100%; height:100%; border:0" src="https://www.google.com/maps/embed/v1/directions?origin=Current%20Location&destination={{ address }}&key=AIzaSyCpXQR0mvYDD7tQSXHuhddPRIs5t539I5c"></iframe>
+        <div id="map" style="width:100%; height:100%; border:0"></div>
+    </div>
+</script>
+
+<script id="vsplit-tpl" type="text/template">
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#church/{{churchName}}">
+            <span class="icon icon-left-nav"></span>
+            Back
+        </a>
+        <h1 class="title">Notes</h1>
+    </header>
+    <div class="content" style="color: white">
+        <div id="top" style="background-color: gray; height: 50%">
+            PUT YER TRANSCRIPT HERE
+        </div>
+        <div id="bottom" style="height: 50%">
+            <textarea class="notes" style="color: black"></textarea>
+        </div>
     </div>
 </script>
 
@@ -116,6 +152,7 @@
 <script src="js/HomeView.js"></script>
 <script src="js/ChurchView.js"></script>
 <script src="js/DirectionsView.js"></script>
+<script src="js/VSplitView.js"></script>
 <script src="js/app.js"></script>
 <script src="cordova.js"></script>
 <script src="lib/fastclick.js"></script>
