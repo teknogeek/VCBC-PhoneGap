@@ -41,7 +41,6 @@ var ChurchView = function(church)
 
 	    //current date and time
 	    var today = moment().utcOffset("America/New_York").second(0);
-	    var today = moment().day("Sunday").hour(9).minute(30).second(0).utcOffset("America/New_York");
 
 	    //loop over service start times
 	    for(var timeIndex in serviceStartTimes)
